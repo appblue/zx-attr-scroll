@@ -36,12 +36,10 @@ l02     ld a,(ix+0)
         ld b,8    
 l01     push bc
 
-        ld a,0
-        out (254),a
-
-        halt
-
 ; *** UNCOMMENT THE LINES BELOW TO SEE RASTER TIME
+        ; xor a
+        ; out (254),a
+        halt
         ; ld a,3
         ; out (254),a
 
