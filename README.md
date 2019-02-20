@@ -1,4 +1,4 @@
 # Attribute scroll for ZX Spectrum
 Simple Z80 assembly code for scrolling text in attributes memory (48k/128k)
 
-Use pasmo assembler and ZEsarUX to run provided code by executing supplied `./build.sh` script.
+Use pasmo assembler and ZEsarUX to run provided code by executing supplied `./build.sh` script (in Linux).
