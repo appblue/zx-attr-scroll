@@ -117,12 +117,12 @@ black_screen:
         ld hl, ATTR
         ld de, ATTR + 1
         ld bc, ATTRSZ - 1
-        ld a, %00000111    ; 0xx000011
+        ld a, %00000111
         ld (hl), a 
         ldir
 
         ; set border to black
-        ld a, $00 ;
+        xor a
         out ($fe), a
 
         ret
