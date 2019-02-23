@@ -1,0 +1,42 @@
+
+ADRESACJA PIERWSZEJ CZESC EKRANU 192 X 64 PIXELE (32 X 64 BAJTOW = 2048 BAJTOW)
+
+                  16384 + OFFSET
+               --------------------               
+LINE 0 YPOS 0: 000 001 002 .... 031
+LINE 1 YPOS 0: 032 033 034 .... 063
+..
+LINE 7 YPOS 0: 224 225 226 .... 255
+
+LINE 0 YPOS 1: 256 257 258 .... 287
+LINE 1 YPOS 1: 288 ...
+..
+LINE 7 YPOS 1: 480 ...
+
+...
+...
+
+LINE 0 YPOS 7: 1792 1793 ...
+LINE 1 YPOS 7: 1824 ..
+..
+LINE 7 YPOS 7: 2016 ... ... ... 2047
+
+ANALOGICZNY SCHEMAT ADRESACJI STOSUJE SIE DO DRUGIEJ I TRZECIEJ CZESCI EKRANU
+
+DRUGA CZESC EKRANU   : 16384 + 2048 = 18432
+TRZECIA CZESC EKRANU : 16384 + 2048 + 2048 = 20480
+
+RAZEM EKRAN ZAJMUJE: 3 * 2048 = 6144 BAJTY
+
+
+   01234567
+  +--------+
+0 |        | = %00000000 = $00
+1 |  ###   | = %00111000 = $38
+2 | #   #  | = %01000100 = $48
+3 | #   #  | = %01000100 = $48
+4 | #####  | = %01111100 = $7B
+5 | #   #  | = %01000100 = $48
+6 | #   #  | = %01000100 = $48
+7 |        | = %00000000 = $00
+  +--------+
