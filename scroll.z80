@@ -135,8 +135,7 @@ black_screen:
         ld hl, SCR
         ld de, SCR + 1
         ld bc, SCRSZ - 1
-        ld a, 0
-        ld (hl), a
+        ld (hl), l
         ldir
 
         ; clear attributes memory
