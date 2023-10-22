@@ -162,3 +162,4 @@ buf     defs 8
 text:   defb "Hello ZX fans !!    ",0
 
         end 40000
+; vim: ft=z8a
