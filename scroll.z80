@@ -24,8 +24,8 @@ APOS    equ ATTR + (24-16)/2*32
 
         call black_screen
 
-l03     ld ix, text
-l02     ld a,(ix+0) 
+l03:    ld ix, text
+l02:    ld a,(ix+0) 
         or a
         jr z, l03
         inc ix
@@ -33,7 +33,7 @@ l02     ld a,(ix+0)
         call print_char
 
         ld b,8    
-l01     push bc
+l01:    push bc
 
 ; *** UNCOMMENT THE LINES BELOW TO SEE RASTER TIME
         ; xor a
@@ -89,11 +89,11 @@ buffer_roll_print:
         ld b,8
         ld a,(color)
         ld c, a
-s4      ld a,0
+s4:     ld a,0
         sla (iy+0)
         jr nc,s5
         ld a, c
-s5      ld (hl), a
+s5:     ld (hl), a
         add hl,de
         ld (hl), a
         add hl,de
@@ -156,8 +156,8 @@ black_screen:
 
         ret
 
-color   defb %00010000
-buf     defs 8
+color:  defb %00010000
+buf:    defs 8
 
 text:   defb "Hello ZX fans !!    ",0
 
