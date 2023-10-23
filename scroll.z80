@@ -22,7 +22,7 @@ ATTR    equ SCR + SCRSZ
 ATTRSZ  equ 32*24
 APOS    equ ATTR + (24-16)/2*32
 
-        call black_screen
+start:  call black_screen
 
 l03:    ld ix, text
 l02:    ld a,(ix+0) 
